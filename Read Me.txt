@@ -1,0 +1,16 @@
+IDE used is vscode
+
+#1 First Create virtual environment
+#2 activate virtual environment
+#3 Then Install django in virtual enironment
+#4 create superuser t0 access admin controls
+
+to create virtual environment type this command in terminal :- python -m venv venv
+
+to activate type this command in terminal :-  venv/Scripts/activate
+
+to install Django type this command in terminal :- pip install django
+
+to run type this command in terminal :- python manage.py runserver
+
+to create superuser this command in terminal :- python manage.py createsuperuser

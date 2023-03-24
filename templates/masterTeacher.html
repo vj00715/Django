@@ -1,0 +1,87 @@
+{% extends 'masterbase.html' %}
+{% block content %}
+<div class="rightContainer">
+    <div class="actionCardContainer">
+        <div href="#" class="actionCard">
+            <p>Total Approve Teacher</p>
+            <p><i class="bi bi-person-check-fill">&nbsp;&nbsp;</i>{{activeTeacher}}</p>
+        </div>
+        <div href="#" class="actionCard">
+            <p>Teacher Pending for approve</p>
+            <p><i class="bi bi-person-dash-fill">&nbsp;&nbsp;</i>{{pendingTeacher}}</p>
+        </div>
+        <div href="#" class="actionCard">
+            <p>Total Teacher Salary</p>
+            <p><i class="bi bi-cash-coin">&nbsp;&nbsp;</i>{{totalSalary}}</p>
+        </div>
+    </div>
+    <table class="table">
+        <caption class="HeadLine">Pending Teacher Approval</caption>
+        <thead class="tableHead">
+            <tr>
+                <th>UserName</th>
+                <th>First Name</th>
+                <th>Contact</th>
+                <th>Salary</th>
+                <th>Active</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+            {% for teacher in pendingTeacherApprove %}
+            <form action="approve/{{teacher.pk}}" method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>{{teacher.username}}</td>
+                    <td>{{teacher.firstname}}</td>
+                    <td>{{teacher.contact}}</td>
+                    <td><input class="InputLog" type="number" name="teacherSalary" placeholder="Enter Salary"></td>
+                    <td>{{teacher.active}}</td>
+                    <td><input class="InputBtn signUpBtn" type="submit" value="Approve"></td>
+                    <!-- <a class="tableBtn" href="approve/{{teacher.pk}}">Approve</a> -->
+                </tr>
+                {% endfor %}
+            </form>
+        </tbody>
+    </table>
+<!-- ---------------------------------------------------------dis approve---------------------------------------------------------------------------------------------------- -->
+    <table class="table">
+        <caption class="HeadLine">Block Teacher</caption>
+        <thead class="tableHead">
+            <tr>
+                <th>UserName</th>
+                <th>First Name</th>
+                <th>Contact</th>
+                <th>Salary</th>
+                <th>Active</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+            {% for teacher2 in pendingTeacherDisApprove %}
+            <tr>
+                <td>{{teacher2.username}}</td>
+                <td>{{teacher2.firstname}}</td>
+                <td>{{teacher2.contact}}</td>
+                <td>{{teacher2.salary}}</td>
+                <td>{{teacher2.active}}</td>
+                <td><a class="InputBtn signUpBtn" href="block/{{teacher2.pk}}">Block</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+<footer>
+    <ul>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+    </ul>
+</footer>
+</body>
+
+</html>
+{% endblock %}

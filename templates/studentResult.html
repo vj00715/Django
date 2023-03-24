@@ -1,0 +1,29 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+<div class="rightContainer">
+    <table class="table">
+        <caption class="HeadLine">Student</caption>
+        <thead class="tableHead">
+            <tr>
+                <th>UserName</th>
+                <th>Course</th>
+                <th>Total Marks</th>
+                <th>Your Marks</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+            {% for mark in marks %}
+            <tr>
+                <td>{{mark.username}}</td>
+                <td>{{mark.course}}</td>
+                <td>{{mark.totalMarks}}</td>
+                <td>{{mark.studentMarks}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
+{% endblock %}

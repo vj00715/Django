@@ -1,0 +1,56 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+<div class="rightContainer studentExam2BodyMain">
+    <form action="" method="post" class="questionForm">
+        {% csrf_token %}
+        <ol>
+            {% for Q in que %}
+            <li>
+                <table class="table">
+                    <thead class="tableHead">
+                        <tr>
+                            <td rowspan="4">{{Q.question}}</td>
+                        </tr>
+                    </thead>
+                    <tbody class="studentExam2Body">
+                        <tr>
+                            <td class="studentExam2"><input type="radio" name="{{Q.id}}" id="option1" value="{{Q.option1}}">
+                                <label for="option1">{{Q.option1}}</label>
+                            </td>
+                            <td class="studentExam2"><input type="radio" name="{{Q.id}}" id="option2" value="{{Q.option2}}">
+                                <label for="option2">{{Q.option2}}</label>
+                            </td>
+                            <td class="studentExam2"><input type="radio" name="{{Q.id}}" id="option3" value="{{Q.option3}}">
+                                <label for="option3">{{Q.option3}}</label>
+                            </td>
+                            <td class="studentExam2"><input type="radio" name="{{Q.id}}" id="option4" value="{{Q.option4}}">
+                                <label for="option4">{{Q.option4}}</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- <div>
+                    <p class="question">{{Q.question}}</p>
+                    <input type="radio" name="{{Q.id}}" id="option1" value="{{Q.option1}}">
+                    <label for="option1">{{Q.option1}}</label>
+                    
+                    <input type="radio" name="{{Q.id}}" id="option2" value="{{Q.option2}}">
+                    <label for="option2">{{Q.option2}}</label>
+                    
+                    <input type="radio" name="{{Q.id}}" id="option3" value="{{Q.option3}}">
+                    <label for="option3">{{Q.option3}}</label>
+                    
+                    <input type="radio" name="{{Q.id}}" id="option4" value="{{Q.option4}}">
+                    <label for="option4">{{Q.option4}}</label>
+                </div> -->
+            </li>
+            {% endfor %}
+        </ol>
+        <input class="InputLog signUpBtn margintop30px" type="submit" value="Submit">
+    </form>
+</div>
+</body>
+
+</html>
+{% endblock %}

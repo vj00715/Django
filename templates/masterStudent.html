@@ -1,0 +1,48 @@
+{% extends 'masterbase.html' %}
+{% block content %}
+<div class="rightContainer">
+    <div class="actionCardContainer">
+        <div href="#" class="actionCard">
+            <p>Total Register Students</p>
+            <p><i class="bi bi-person-plus-fill">&nbsp;&nbsp;</i>{{studentCount}}</p>
+        </div>
+    </div>
+    <!----------------------------- Student table --------------------->
+    <table class="table">
+        <caption class="HeadLine">Student</caption>
+        <thead class="tableHead">
+            <tr>
+                <th>UserName</th>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>Contact</th>
+                <th>E-Mail</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+            {% for student in studentAll %}
+            <tr>
+                <td>{{student.username}}</td>
+                <td>{{student.firstname}}</td>
+                <td>{{student.lastname}}</td>
+                <td>{{student.contact}}</td>
+                <td>{{student.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+<footer>
+    <ul>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+    </ul>
+</footer>
+</body>
+
+</html>
+{% endblock %}

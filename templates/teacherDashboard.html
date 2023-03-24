@@ -1,0 +1,53 @@
+{% extends 'teacherbase.html' %}
+{% block content %}
+        <div class="rightContainer">
+            <div class="actionCardContainer">
+                <div class="actionCard">
+                    <p>Registered Students</p>
+                    <p><i class="bi bi-person-plus-fill">&nbsp;&nbsp;</i>{{studentCount}}</p>
+                </div>
+                <div class="actionCard">
+                    <p>Total Courses</p>
+                    <p><i class="bi bi-journal-bookmark-fill">&nbsp;&nbsp;</i>{{course}}</p>
+                </div>
+                <div class="actionCard">
+                    <p>Total Question</p>
+                    <p><i class="bi bi-question-circle">&nbsp;&nbsp;</i>{{question}}</p>
+                </div>
+            </div>
+            <table class="table">
+                <caption class="HeadLine">Exam Result</caption>
+                <thead class="tableHead">
+                    <tr>
+                        <th>Username</th>
+                        <th>Course</th>
+                        <th>Total Marks</th>
+                        <th>Student Marks</th>
+                    </tr>
+                </thead>
+                <tbody class="tableBody">
+                    {% for r in results %}
+                    <tr>
+                        <td>{{r.username}}</td>
+                        <td>{{r.course}}</td>
+                        <td>{{r.totalMarks}}</td>
+                        <td>{{r.studentMarks}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+{% endblock %}

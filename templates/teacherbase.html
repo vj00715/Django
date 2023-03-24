@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/response.css' %}">
+    <script defer src="{%static 'js\navbar.js'%}"></script>
+    <title>Students</title>
+</head>
+
+<body>
+    <nav class="topNavbar">
+        <div class="navbarTitle">ONLINE EXAMINATION SYSTEM</div>
+        <ul class="NavLinks">
+            <li><a href="teacherLogout">LOGOUT</a></li>
+        </ul>
+        <div class="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="cross">&times;</span>
+        </div>
+    </nav>
+    <div class="bodyContainer">
+        <div class="leftContainer">
+            <div class="leftLogo">
+                <img src="../{{data.profile}}" alt="student">
+                <strong class="logoDetail"><em>{{data.firstname}} ({{data.username}})</em></strong>
+            </div>
+            <ul class="leftOption">
+                <li><a href="teacherDashboard">Dashboard</a></li>
+                <li><a href="teacherCourse">Manage Courses</a></li>
+                <li><a href="teacherAddQuestion">Manage Question</a></li>
+            </ul>
+        </div>
+        {% block content %}
+        {% endblock %}

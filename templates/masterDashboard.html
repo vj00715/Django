@@ -1,0 +1,83 @@
+{% extends 'masterbase.html' %}
+{% block content %}
+        <div class="rightContainer">
+            <div class="actionCardContainer">
+                <div class="actionCard">
+                    <p>Total Register Student</p>
+                    <p><i class="bi bi-person-plus-fill">&nbsp;&nbsp;</i>{{studentCount}}</p>
+                </div>
+                <div class="actionCard">
+                    <p>Total Register Teacher</p>
+                    <p><i class="bi bi-person-circle">&nbsp;&nbsp;</i>{{teacherCount}}</p>
+                </div>
+                <div class="actionCard">
+                    <p>Total Course</p>
+                    <p><i class="bi bi-journal-bookmark-fill">&nbsp;&nbsp;</i>{{totalCourses}}</p>
+                </div>
+                <div class="actionCard">
+                    <p>Total Question</p>
+                    <p><i class="bi bi-question-circle">&nbsp;&nbsp;</i>{{totalQuestion}}</p>
+                </div>
+            </div>
+            <table class="table">
+                <caption class="HeadLine">Admin</caption>
+                <thead class="tableHead">
+                    <tr>
+                        <th>UserName</th>
+                        <th>Name</th>
+                        <th>LastName</th>
+                        <th>Contact</th>
+                        <th>E-Mail</th>
+                    </tr>
+                </thead>
+                <tbody class="tableBody">
+                    {% for admin in masterAll %}
+                    <tr>
+                        <td>{{admin.username}}</td>
+                        <td>{{admin.firstname}}</td>
+                        <td>{{admin.lastname}}</td>
+                        <td>{{admin.contact}}</td>
+                        <td>{{admin.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <!----------------------------- teacher table --------------------->
+            <table class="table">
+                <caption class="HeadLine">Teacher</caption>
+                <thead class="tableHead">
+                    <tr>
+                        <th>UserName</th>
+                        <th>Name</th>
+                        <th>LastName</th>
+                        <th>Contact</th>
+                        <th>E-Mail</th>
+                    </tr>
+                </thead>
+                <tbody class="tableBody">
+                    {% for teacher in teacherAll %}
+                    <tr>
+                        <td>{{teacher.username}}</td>
+                        <td>{{teacher.firstname}}</td>
+                        <td>{{teacher.lastname}}</td>
+                        <td>{{teacher.contact}}</td>
+                        <td>{{teacher.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+{% endblock %}

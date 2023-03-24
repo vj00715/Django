@@ -1,0 +1,21 @@
+{% extends 'masterDashboard.html' %}
+{% block content %}
+<div class="rightContainer">
+    <div class="actionCardContainer">
+        <div href="#" class="actionCard">
+            <p>Total Question</p>
+            <p><i class="bi bi-question-circle">&nbsp;&nbsp;</i>{{totalQuestion}}</p>
+        </div>
+    </div>
+    <div class="inputForm">
+        <form class="insertInputForm" method="post">
+            {% csrf_token %}
+            {{question}}
+            <input class="InputBtn signUpBtn" type="submit" value="Add Question">
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
+{% endblock %}

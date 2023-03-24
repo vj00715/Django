@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/response.css' %}">
+    <script defer src="{% static 'js/navbar.js' %}"></script>
+    <title>Teacher Login</title>
+</head>
+<body>
+    <nav class="topNavbar">
+        <div class="navbarTitle">ONLINE EXAMINATION SYSTEM</div>
+        <ul class="NavLinks">
+            <li><a href="/teacher">Go Back Teacher Login</a></li>
+        </ul>
+        <div class="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="cross">&times;</span>
+        </div>
+    </nav>
+    <div class="mainContainer">
+        <div class="underLays">
+            <form class="formstyle" method="post" enctype="multipart/form-data">
+                <img src="{% static 'img/teacher.svg' %}" alt="student">
+                <span>TEACHER</span>
+                {% csrf_token %}
+                {{signup}}
+                {{signup2}}
+                <input class="InputBtn signUpBtn" type="submit" value="SignUp">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

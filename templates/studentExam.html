@@ -1,0 +1,28 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+
+<div class="rightContainer">
+    <table class="table">
+        <caption class="HeadLine">Select Course</caption>
+        <thead class="tableHead">
+            <tr>
+                <th>Course Name</th>
+                <th>Total Marks</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+            {% for c in course %}
+            <tr>
+                <td>{{c.courseName}}</td>
+                <td>{{c.questionMarks}}</td>
+                <td><a class="InputLog signUpBtn" href="question/{{c.courseName}}">Select</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
+{% endblock %}
