@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Poppins&family=Qwitcher+Grypen:wght@700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+:root {
+    --bg: rgba(0, 0, 0, 0.5);
+    --support: rgba(225, 225, 225, .8);
+    --card: rgba(225, 225, 225, .5);
+    --navbtn: rgba(225, 225, 225, .9);
+    --loginBtn: #2196F3;
+    --signUpBtn: #E4A11B;
+    --gradient: linear-gradient(to right bottom, #370516, #5c0031, #78005e, #80009d, #5212eb);
+    --color1: navy;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.1px solid yellow; */
+    transition: all 300ms;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.rightContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.rightContainer::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.rightContainer::-webkit-scrollbar-thumb {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+body {
+    /* background: var(--bg); */
+    background-image: url('/static/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.topNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+    background-color: var(--support);
+    margin: 10px 20px;
+    margin-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 16px 1px var(--bg);
+}
+
+.NavLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbarTitle {
+    font-size: 2rem;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
+
+.NavLinks li {
+    list-style: none;
+}
+
+.NavLinks li a {
+    display: block;
+    text-transform: capitalize;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    /* border: 1px solid var(--bg); */
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--navbtn);
+    color: var(--color1);
+}
+
+.NavLinks li a:hover {
+    transform: translate(0px, -2px);
+    transition: all 300ms;
+    box-shadow: 0px 2px 2px 0px var(--bg);
+}
+
+.menu {
+    /* position: absolute;
+    right: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu .bar {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: var(--bg);
+}
+
+.menu .cross {
+    display: none;
+}
+
+/* body styling */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer .underLays {
+    margin: 1rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 150px 0px;
+    border: 15px solid var(--support);
+    box-shadow: 0px 0px 25px 5px var(--bg);
+}
+
+.mainContainer .formstyle {
+    width: 100%;
+    height: 100%;
+    background: var(--support);
+    border: 5px solid var(--bg);
+    border-radius: 0px 150px;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px 10px var(--support);
+}
+
+.formstyle img {
+    width: 100px;
+    height: 100px;
+}
+
+.formstyle span {
+    margin-bottom: 10px;
+}
+
+.InputLog,
+.InputBtn {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+    margin: 5px 0px;
+    border-radius: 10px;
+}
+
+.InputLog {
+    text-indent: 15px;
+}
+
+.InputBtn {
+    text-decoration: none;
+    text-align: center;
+}
+
+.loginBtn {
+    background: var(--loginBtn);
+}
+
+.signUpBtn {
+    background: var(--signUpBtn);
+    text-decoration: none;
+}
+
+.InputLogMess {
+    width: 100%;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    text-indent: 15px;
+}
+
+/* ----------------------------------body css---------------------- */
+/* .bodyContainer .leftContainer .leftLogo .leftOption .rightContainer */
+
+.bodyContainer {
+    display: flex;
+    margin: 10px 20px;
+    gap: 20px;
+}
+
+.leftContainer {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--support);
+    box-shadow: 0px 0px 16px 1px var(--bg);
+}
+
+.leftLogo img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.logoDetail {
+    display: block;
+    font-size: 1.5rem;
+    margin: 5px;
+    padding: 5px;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
+
+.leftOption {
+    width: 100%;
+}
+
+.leftOption li {
+    list-style: none;
+}
+
+.leftOption li a {
+    display: block;
+    text-decoration: none;
+    line-height: 60px;
+    /* border: 1px solid var(--bg); */
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    background: var(--navbtn);
+    color: var(--color1);
+}
+.leftOption li a:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 8px 1px var(--color1);
+    margin: 11px;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--support);
+    box-shadow: 0px 0px 16px 1px var(--bg);
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+/* ---------------------------------table------------------------------------------ */
+.table {
+    width: 100%;
+    background: var(--card);
+}
+
+.tableHead {
+    text-transform: uppercase;
+}
+
+.tableBody {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.HeadLine {
+    font-size: 1.5rem;
+    border: 1px solid var(--bg);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background: var(--card);
+}
+
+.table,
+.tableHead,
+.tableBody {
+    border-collapse: collapse;
+    /* border-spacing: ; */
+}
+
+.table th,
+td {
+    border-bottom: 1px solid var(--bg);
+    padding: 10px;
+}
+
+.tableBtn a {
+    width: 100%;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* --------------------------rightContainner .actionCard------------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
+.actionCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    row-gap: 15px;
+    column-gap: 5px;
+}
+
+.actionCardContainer .actionCard {
+    text-decoration: none;
+    width: 32%;
+    height: 160px;
+    border-radius: 10px;
+    background: var(--card);
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color1);
+}
+.actionCardContainer .actionCard:hover{
+    transform: scale(0.98);
+    box-shadow: 0px 0px 8px 1px var(--color1);
+}
+.actionCard p:first-of-type{
+    text-align: center;
+}
+.actionCard p:last-of-type{
+    text-align: center;
+}
+
+/* ---------------------------------------uniques css of serparated pages-------------------------------------------------- */
+/* admin or master or main course and question form css */
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    border: 5px solid var(--bg);
+    border-radius: 60px;
+}
+.insertInputForm{
+    border: 5px solid var(--support);
+    padding: 40px;
+}
+
+
+
+/* ---------------------------------------uniques css of serparated pages-------------------------------------------------- */
+.studentExam2BodyMain{
+    padding: 30px;
+}
+.studentExam2Body{
+    padding: 100px;
+}
+.studentExam2Body .studentExam2{
+    width: 25%;
+    text-align: left;
+}
+
+.margintop30px{
+    padding: 30px;
+}
+
+/* ---------------------------------------uniques css of serparated pages(studentDashboard page)------------------------------------ */
+.profileSection{
+    font-size: 2rem;
+    margin: auto;
+}
+.HighLight{
+    color: var(--color1);
+}
+.name{
+    color: maroon;
+}

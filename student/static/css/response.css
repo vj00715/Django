@@ -1,0 +1,133 @@
+@media only screen and (min-width: 801px){
+    .actionCardContainer .actionCard{
+        width: 32.5%;
+    }
+}
+@media only screen and (max-width: 800px){
+    /* responsive navbar css */
+    .menu{
+        display: flex;
+    }
+    .menu.active{
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+    .topNavbar{
+        padding: 0;
+        text-align: center;
+        padding: 15px;
+    }
+    .topNavbar.active{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .navbarTitle{
+        margin: auto;
+        text-align: center;
+    }
+    .NavLinks{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+        padding: 15px 15px 0px 15px;
+    }
+    .NavLinks li a:hover{
+        transform: scale(1.01);
+        transition: all 500ms;
+    }
+    .bar.active{
+        display: none;
+    }
+    .cross.active{
+        display: block;
+        font-size: 2.5rem;
+        align-items: center;
+        font-weight: bold;
+    }
+    .topNavbar .NavLinks li{
+        width: 100%;
+    }
+    .NavLinks li a{
+        width: 100%;
+        margin: 0;
+    }
+    .mainContainer .underLays{
+        width: 100%;
+    }
+    .mainContainer .formstyle{
+        padding: 50px;
+    }
+    .NavLinks.active{
+        display: flex;
+    }
+    /* --------------------------end navbar------------------------------ */
+    /* .topNavbar{
+        margin: 15px;
+    } */
+    
+    .bodyContainer{
+        flex-direction: column;
+        margin: 15px;
+        gap: 0px;
+    }
+    .leftContainer{
+        width: 100%;
+        /* padding: 15px 0px 0px 0px; */
+        /* background: transparent; */
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+    .leftLogo img{
+        margin-top: 10px;
+        width: 20%;
+        box-shadow: 0px 0px 10px 1px var(--support);
+        cursor: pointer;
+    }
+    .logoDetail{
+        margin: 0px 0px 7px 0px;
+        padding: 0;
+    }
+    .leftOption{
+        display: none;
+        
+    }
+    .leftOption li a{
+        font-size: 1.2rem;
+        line-height: 45px;
+    }
+    .leftOption.active{
+        display: flex;
+        flex-flow: column;
+        gap: 5px;
+        margin: 0;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    /* ----rightContainer----------------- */
+    .rightContainer{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .actionCardContainer .actionCard{
+        width: 49%;
+    }
+    /* adjustment */
+    .navbarTitle {
+        height: auto;
+    }
+}
+@media only screen and (max-width: 400px){
+    .mainContainer .formstyle{
+        padding: 5px;
+    }
+    .actionCardContainer .actionCard{
+        width: 100%;
+    }
+    .navbarTitle {
+        font-size: 1.2rem;
+    }
+}
+
